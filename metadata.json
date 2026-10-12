@@ -1,0 +1,6 @@
+{
+  "name": "VELoop Rewards & AI Studio",
+  "description": "Full-stack VELoop Daily Streak & Rewards system with backend-authoritative streak engine, wallet ledger, and Gemini AI Magic Caption & Image Studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

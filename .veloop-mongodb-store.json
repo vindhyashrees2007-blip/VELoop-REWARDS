@@ -1,0 +1,361 @@
+{
+  "users": [
+    {
+      "userId": "USR_VELOOP_01",
+      "email": "demo@velooprewards.in",
+      "name": "Aarav Sharma (Design Reference State)",
+      "passwordHash": "veloop_hashed_demo123",
+      "eligible": true,
+      "serverTimeOffsetMs": 0,
+      "createdAt": "2026-09-26T05:06:18.456Z"
+    },
+    {
+      "userId": "USR_VELOOP_02",
+      "email": "fresh@velooprewards.in",
+      "name": "Priya Patel (Fresh Day 1 User)",
+      "passwordHash": "veloop_hashed_fresh123",
+      "eligible": true,
+      "serverTimeOffsetMs": 0,
+      "createdAt": "2026-09-27T06:06:18.456Z"
+    }
+  ],
+  "wallets": [
+    {
+      "userId": "USR_VELOOP_01",
+      "veBalance": 130,
+      "giftCardBalanceInr": 0,
+      "updatedAt": "2026-09-27T06:18:53.710Z"
+    },
+    {
+      "userId": "USR_VELOOP_02",
+      "veBalance": 100,
+      "giftCardBalanceInr": 0,
+      "updatedAt": "2026-09-27T06:06:18.456Z"
+    }
+  ],
+  "streakConfigs": [
+    {
+      "configId": "DEFAULT_STREAK_CONFIG",
+      "totalDays": 7,
+      "claimIntervalMs": 86400000,
+      "missedWindowMs": 172800000,
+      "resetOnMiss": true,
+      "active": true,
+      "updatedAt": "2026-09-27T06:06:18.456Z"
+    }
+  ],
+  "streakRewards": [
+    {
+      "rewardId": "REWARD_DAY_1",
+      "day": 1,
+      "rewardType": "VES",
+      "currency": "VES",
+      "amount": 5,
+      "displayValue": "+5",
+      "title": "Daily Reward",
+      "subtitle": "5 VEs",
+      "description": "Day 1 check-in reward of 5 VEs credited directly to your VELoop Wallet.",
+      "badge": null,
+      "assetType": "coin",
+      "isUltimate": false,
+      "active": true,
+      "metadata": {
+        "tier": "standard",
+        "glow": "emerald"
+      }
+    },
+    {
+      "rewardId": "REWARD_DAY_2",
+      "day": 2,
+      "rewardType": "VES",
+      "currency": "VES",
+      "amount": 10,
+      "displayValue": "+10",
+      "title": "Daily Reward",
+      "subtitle": "10 VEs",
+      "description": "Day 2 consecutive check-in bonus of 10 VEs.",
+      "badge": null,
+      "assetType": "coin",
+      "isUltimate": false,
+      "active": true,
+      "metadata": {
+        "tier": "standard",
+        "glow": "gold"
+      }
+    },
+    {
+      "rewardId": "REWARD_DAY_3",
+      "day": 3,
+      "rewardType": "VES",
+      "currency": "VES",
+      "amount": 15,
+      "displayValue": "+15",
+      "title": "Daily Reward",
+      "subtitle": "15 VEs",
+      "description": "Day 3 consecutive check-in bonus of 15 VEs.",
+      "badge": null,
+      "assetType": "coin",
+      "isUltimate": false,
+      "active": true,
+      "metadata": {
+        "tier": "standard",
+        "glow": "purple"
+      }
+    },
+    {
+      "rewardId": "REWARD_DAY_4",
+      "day": 4,
+      "rewardType": "GIFT_CARD",
+      "currency": "INR",
+      "amount": 1,
+      "displayValue": "₹1",
+      "title": "Daily Reward",
+      "subtitle": "Amazon Gift Card",
+      "description": "Day 4 mid-week milestone: ₹1 Amazon Gift Card voucher.",
+      "badge": null,
+      "assetType": "gift-box",
+      "isUltimate": false,
+      "active": true,
+      "metadata": {
+        "tier": "milestone",
+        "brand": "Amazon"
+      }
+    },
+    {
+      "rewardId": "REWARD_DAY_5",
+      "day": 5,
+      "rewardType": "GIFT_CARD",
+      "currency": "INR",
+      "amount": 2,
+      "displayValue": "₹2",
+      "title": "Daily Reward",
+      "subtitle": "Amazon Gift Card",
+      "description": "Day 5 streak reward: ₹2 Amazon Gift Card voucher.",
+      "badge": "Gift Card",
+      "assetType": "gift-card",
+      "isUltimate": false,
+      "active": true,
+      "metadata": {
+        "tier": "milestone",
+        "brand": "Amazon"
+      }
+    },
+    {
+      "rewardId": "REWARD_DAY_6",
+      "day": 6,
+      "rewardType": "VES",
+      "currency": "VES",
+      "amount": 30,
+      "displayValue": "+30",
+      "title": "Daily Reward",
+      "subtitle": "30 VEs",
+      "description": "Day 6 mega coin drop: 30 VEs credited to your VELoop Wallet.",
+      "badge": "Coin",
+      "assetType": "coin",
+      "isUltimate": false,
+      "active": true,
+      "metadata": {
+        "tier": "boost",
+        "glow": "purple"
+      }
+    },
+    {
+      "rewardId": "REWARD_DAY_7",
+      "day": 7,
+      "rewardType": "GIFT_CARD",
+      "currency": "INR",
+      "amount": 5,
+      "displayValue": "₹5",
+      "title": "Ultimate Reward",
+      "subtitle": "Amazon Gift Card",
+      "description": "Day 7 Ultimate Streak Reward: ₹5 Amazon Gift Card for completing 7 consecutive days!",
+      "badge": "VIP",
+      "assetType": "crown",
+      "isUltimate": true,
+      "active": true,
+      "metadata": {
+        "tier": "ultimate",
+        "brand": "Amazon",
+        "unlockText": "Unlock on Day 7"
+      }
+    }
+  ],
+  "streakCycles": [
+    {
+      "cycleId": "CYCLE_USR01_001",
+      "userId": "USR_VELOOP_01",
+      "cycleNumber": 1,
+      "currentStreak": 2,
+      "currentDay": 3,
+      "status": "ACTIVE",
+      "lastClaimedDay": 2,
+      "lastClaimedAt": "2026-09-27T06:18:53.710Z",
+      "nextClaimAt": "2026-09-28T06:18:53.710Z",
+      "expireAt": "2026-09-29T06:18:53.710Z",
+      "resetReason": null,
+      "startedAt": "2026-09-26T05:06:18.456Z",
+      "completedAt": null,
+      "updatedAt": "2026-09-27T06:18:53.710Z"
+    },
+    {
+      "cycleId": "CYCLE_USR02_001",
+      "userId": "USR_VELOOP_02",
+      "cycleNumber": 1,
+      "currentStreak": 0,
+      "currentDay": 1,
+      "status": "ACTIVE",
+      "lastClaimedDay": 0,
+      "lastClaimedAt": null,
+      "nextClaimAt": null,
+      "expireAt": null,
+      "resetReason": null,
+      "startedAt": "2026-09-27T06:06:18.456Z",
+      "completedAt": null,
+      "updatedAt": "2026-09-27T06:06:18.456Z"
+    }
+  ],
+  "streakClaims": [
+    {
+      "claimId": "CLM_INIT_DAY1_USR01",
+      "userId": "USR_VELOOP_01",
+      "cycleId": "CYCLE_USR01_001",
+      "day": 1,
+      "rewardId": "REWARD_DAY_1",
+      "rewardType": "VES",
+      "amount": 5,
+      "currency": "VES",
+      "status": "CLAIMED",
+      "claimedAt": "2026-09-26T05:06:18.456Z",
+      "transactionId": "TXN_INIT_DAY1_USR01",
+      "referenceId": "STREAK-C001-D01",
+      "createdAt": "2026-09-26T05:06:18.456Z"
+    },
+    {
+      "claimId": "CLM_1790489933710_D2",
+      "userId": "USR_VELOOP_01",
+      "cycleId": "CYCLE_USR01_001",
+      "day": 2,
+      "rewardId": "REWARD_DAY_2",
+      "rewardType": "VES",
+      "amount": 10,
+      "currency": "VES",
+      "status": "CLAIMED",
+      "claimedAt": "2026-09-27T06:18:53.710Z",
+      "transactionId": "TXN_1790489933710_W8S89",
+      "referenceId": "STREAK-C001-D02-MUJFH6RY",
+      "createdAt": "2026-09-27T06:18:53.710Z"
+    }
+  ],
+  "walletTransactions": [
+    {
+      "transactionId": "TXN_WELCOME_USR01",
+      "userId": "USR_VELOOP_01",
+      "currency": "VES",
+      "rewardType": "VES",
+      "type": "CREDIT",
+      "amount": 115,
+      "source": "INITIAL_BONUS",
+      "streakDay": 0,
+      "cycleId": "CYCLE_USR01_001",
+      "referenceId": "WELCOME-BONUS-01",
+      "balanceBefore": 0,
+      "balanceAfter": 115,
+      "status": "COMPLETED",
+      "createdAt": "2026-09-26T05:06:18.456Z"
+    },
+    {
+      "transactionId": "TXN_INIT_DAY1_USR01",
+      "userId": "USR_VELOOP_01",
+      "currency": "VES",
+      "rewardType": "VES",
+      "type": "CREDIT",
+      "amount": 5,
+      "source": "DAILY_STREAK",
+      "streakDay": 1,
+      "cycleId": "CYCLE_USR01_001",
+      "referenceId": "STREAK-C001-D01",
+      "balanceBefore": 115,
+      "balanceAfter": 120,
+      "status": "COMPLETED",
+      "createdAt": "2026-09-26T05:06:18.456Z"
+    },
+    {
+      "transactionId": "TXN_WELCOME_USR02",
+      "userId": "USR_VELOOP_02",
+      "currency": "VES",
+      "rewardType": "VES",
+      "type": "CREDIT",
+      "amount": 100,
+      "source": "INITIAL_BONUS",
+      "streakDay": 0,
+      "cycleId": "CYCLE_USR02_001",
+      "referenceId": "WELCOME-BONUS-02",
+      "balanceBefore": 0,
+      "balanceAfter": 100,
+      "status": "COMPLETED",
+      "createdAt": "2026-09-27T06:06:18.456Z"
+    },
+    {
+      "transactionId": "TXN_1790489933710_W8S89",
+      "userId": "USR_VELOOP_01",
+      "currency": "VES",
+      "rewardType": "VES",
+      "type": "CREDIT",
+      "amount": 10,
+      "source": "DAILY_STREAK",
+      "streakDay": 2,
+      "cycleId": "CYCLE_USR01_001",
+      "referenceId": "STREAK-C001-D02-MUJFH6RY",
+      "balanceBefore": 120,
+      "balanceAfter": 130,
+      "status": "COMPLETED",
+      "createdAt": "2026-09-27T06:18:53.710Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "logId": "AUD_INIT_01",
+      "userId": "USR_VELOOP_01",
+      "eventType": "STREAK_CLAIM_SUCCESS",
+      "day": 1,
+      "cycleId": "CYCLE_USR01_001",
+      "reason": "Day 1 reward (+5 VEs) claimed and credited to wallet.",
+      "serverTimestamp": "2026-09-26T05:06:18.456Z"
+    },
+    {
+      "logId": "AUD_1790489700226_e3up",
+      "userId": "USR_VELOOP_01",
+      "eventType": "AUTH_LOGIN",
+      "reason": "User authenticated via JWT (demo@velooprewards.in).",
+      "serverTimestamp": "2026-09-27T06:15:00.226Z"
+    },
+    {
+      "logId": "AUD_1790489933710_1B56J",
+      "userId": "USR_VELOOP_01",
+      "eventType": "STREAK_CLAIM_REQUEST",
+      "day": 2,
+      "cycleId": "CYCLE_USR01_001",
+      "reason": "User initiated Daily Streak claim request.",
+      "payloadSnapshot": {
+        "day": 2
+      },
+      "serverTimestamp": "2026-09-27T06:18:53.710Z"
+    },
+    {
+      "logId": "AUD_1790489933710_4Z5ON",
+      "userId": "USR_VELOOP_01",
+      "eventType": "STREAK_CLAIM_SUCCESS",
+      "day": 2,
+      "cycleId": "CYCLE_USR01_001",
+      "reason": "Granted Day 2 reward (+10 10 VEs) via transaction TXN_1790489933710_W8S89. Next unlock at 2026-09-28T06:18:53.710Z.",
+      "serverTimestamp": "2026-09-27T06:18:53.710Z"
+    },
+    {
+      "logId": "AUD_1790490098533_rb57",
+      "userId": "USR_VELOOP_01",
+      "eventType": "AUTH_LOGIN",
+      "reason": "User authenticated via JWT (demo@velooprewards.in).",
+      "serverTimestamp": "2026-09-27T06:21:38.533Z"
+    }
+  ]
+}

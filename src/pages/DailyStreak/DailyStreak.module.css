@@ -1,0 +1,966 @@
+/* VELoop Rewards — Daily Streak System CSS Module (Desktop, Tablet & Mobile) */
+
+.pageWrapper {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 22% 16%, rgba(124, 58, 237, 0.22) 0%, transparent 42%),
+    radial-gradient(circle at 78% 18%, rgba(245, 158, 11, 0.12) 0%, transparent 38%),
+    radial-gradient(circle at 50% 85%, rgba(109, 40, 217, 0.16) 0%, transparent 48%),
+    linear-gradient(180deg, #090514 0%, #0d071e 48%, #080412 100%);
+  color: #f8fafc;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.containerMain {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header / Navbar */
+.streakHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.18);
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.backBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(30, 20, 56, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.32);
+  color: #f8fafc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), border-color 150ms ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.backBtn:hover {
+  transform: translateX(-2px);
+  border-color: rgba(245, 158, 11, 0.65);
+  background: rgba(46, 29, 88, 0.95);
+}
+
+.streakBadgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(44, 24, 78, 0.92) 0%, rgba(28, 16, 52, 0.96) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  box-shadow: 0 0 22px rgba(245, 158, 11, 0.14);
+}
+
+.gemBalancePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(25, 16, 48, 0.92);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.gemBalancePill:hover {
+  border-color: #fbbf24;
+  transform: translateY(-1px);
+}
+
+/* Hero Section */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 1.25rem;
+  margin-bottom: 1.35rem;
+}
+
+.heroBannerCard {
+  position: relative;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 18% 35%, rgba(139, 92, 246, 0.28) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(31, 18, 61, 0.95) 0%, rgba(18, 10, 38, 0.98) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.32);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  padding: 1.5rem 1.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.heroTopRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.heroTitleWhite {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0;
+}
+
+.heroTitleGold {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  line-height: 1.08;
+  background: linear-gradient(180deg, #fde047 0%, #f59e0b 65%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.1rem 0 0.45rem 0;
+  filter: drop-shadow(0 2px 12px rgba(245, 158, 11, 0.25));
+}
+
+.heroSubtitle {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 38ch;
+}
+
+/* 3 Statistics Cards inside Hero */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.35rem;
+}
+
+.statBox {
+  background: rgba(15, 9, 32, 0.78);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 14px;
+  padding: 0.75rem 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.statIconWrapPurple {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.18);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  color: #c4b5fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIconWrapGreen {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(52, 211, 153, 0.38);
+  color: #34d399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIconWrapGold {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(251, 191, 36, 0.42);
+  color: #fbbf24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statLabel {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.statValue {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin: 0.1rem 0 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.statValueGold {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: #fbbf24;
+  margin: 0.1rem 0 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ultimate Reward Top Showcase Card */
+.ultimateShowcaseCard {
+  position: relative;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 28% 50%, rgba(168, 85, 247, 0.34) 0%, rgba(88, 28, 135, 0.15) 45%, transparent 70%),
+    linear-gradient(135deg, rgba(35, 18, 68, 0.96) 0%, rgba(17, 9, 36, 0.98) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.42);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), 0 0 28px rgba(139, 92, 246, 0.15);
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+
+.amazonBadgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(15, 10, 30, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  color: #f1f5f9;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Divider Banner */
+.sparkleDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 1.15rem 0 1.35rem 0;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.dividerLine {
+  flex: 1;
+  max-width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.45), transparent);
+}
+
+/* 7 Daily Reward Cards Grid */
+.rewardCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.85rem;
+}
+
+.rewardCard {
+  position: relative;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(27, 17, 52, 0.92) 0%, rgba(16, 10, 34, 0.98) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  padding: 0.95rem 0.75rem 0.85rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.rewardCard:hover {
+  transform: translateY(-3px);
+}
+
+.rewardCardClaimed {
+  background: linear-gradient(180deg, rgba(16, 44, 42, 0.65) 0%, rgba(14, 18, 36, 0.96) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.55);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+}
+
+.rewardCardToday {
+  background:
+    radial-gradient(circle at 50% 25%, rgba(245, 158, 11, 0.24) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(48, 31, 24, 0.88) 0%, rgba(22, 14, 38, 0.98) 100%);
+  border: 1.5px solid #fbbf24;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.22), 0 0 18px rgba(251, 191, 36, 0.18);
+}
+
+.rewardCardUltimate {
+  background:
+    radial-gradient(circle at 50% 22%, rgba(245, 158, 11, 0.22) 0%, rgba(139, 92, 246, 0.18) 55%, transparent 75%),
+    linear-gradient(180deg, rgba(44, 26, 62, 0.94) 0%, rgba(20, 11, 38, 0.98) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.65);
+  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.16);
+}
+
+/* Card Top Badges */
+.dayPill {
+  font-size: 0.73rem;
+  font-weight: 700;
+  padding: 0.2rem 0.62rem;
+  border-radius: 999px;
+  background: rgba(45, 30, 82, 0.85);
+  border: 1px solid rgba(167, 139, 250, 0.32);
+  color: #e2e8f0;
+}
+
+.dayPillToday {
+  background: rgba(245, 158, 11, 0.22);
+  border-color: rgba(251, 191, 36, 0.65);
+  color: #fde047;
+}
+
+.dayPillUltimate {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: #fbbf24;
+  color: #fde047;
+}
+
+.cornerBadgeToday {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  color: #090514;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+  letter-spacing: 0.02em;
+}
+
+.cornerBadgeTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.14rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.35);
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  color: #ddd6fe;
+}
+
+.cornerBadgeVip {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.14rem 0.52rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+  color: #fffbeb;
+}
+
+/* Action Buttons on Cards */
+.btnClaimActive {
+  width: 100%;
+  padding: 0.52rem 0.65rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fde047 0%, #f59e0b 55%, #d97706 100%);
+  border: 1px solid #fef08a;
+  color: #1c1008;
+  font-weight: 800;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.42);
+  cursor: pointer;
+  transition: transform 140ms ease, filter 140ms ease;
+  white-space: nowrap;
+}
+
+.btnClaimActive:hover:not(:disabled) {
+  transform: scale(1.03);
+  filter: brightness(1.06);
+}
+
+.btnClaimActive:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btnClaimedState {
+  width: 100%;
+  padding: 0.48rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  color: #34d399;
+  font-weight: 700;
+  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.btnLockedState {
+  width: 100%;
+  padding: 0.48rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(30, 22, 54, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+/* Supporting Benefits Section (Why Maintain Your Streak?) */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.benefitCard {
+  background: rgba(21, 13, 42, 0.82);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-radius: 16px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* Footer Trust Strip */
+.trustStrip {
+  background: linear-gradient(90deg, rgba(24, 15, 48, 0.92) 0%, rgba(35, 20, 68, 0.95) 50%, rgba(24, 15, 48, 0.92) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: 16px;
+  padding: 0.85rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* StreakLeaderboard Section */
+.leaderboardSection {
+  position: relative;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(245, 158, 11, 0.14) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(24, 14, 48, 0.95) 0%, rgba(13, 8, 28, 0.98) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.32);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+  padding: 1.5rem 1.65rem;
+  margin-bottom: 1.85rem;
+}
+
+.podiumGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.podiumCard {
+  position: relative;
+  border-radius: 18px;
+  padding: 1.1rem 1rem;
+  background: linear-gradient(180deg, rgba(31, 19, 61, 0.92) 0%, rgba(17, 10, 35, 0.96) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms ease;
+}
+
+.podiumCard:hover {
+  transform: translateY(-3px);
+}
+
+.podiumCardFirst {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.25) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(48, 30, 22, 0.94) 0%, rgba(22, 13, 40, 0.98) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.68);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.18);
+}
+
+.podiumCardSecond {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(148, 163, 184, 0.22) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(34, 26, 62, 0.94) 0%, rgba(18, 12, 36, 0.98) 100%);
+  border: 1.5px solid rgba(203, 213, 225, 0.48);
+}
+
+.podiumCardThird {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.22) 0%, transparent 65%),
+    linear-gradient(180deg, rgba(42, 24, 38, 0.94) 0%, rgba(18, 11, 35, 0.98) 100%);
+  border: 1.5px solid rgba(217, 119, 6, 0.52);
+}
+
+.leaderboardRow {
+  display: grid;
+  grid-template-columns: 64px 1.6fr 1fr 1fr 1.1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: rgba(18, 11, 36, 0.84);
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.leaderboardRow:hover {
+  background: rgba(30, 19, 58, 0.92);
+  border-color: rgba(167, 139, 250, 0.42);
+}
+
+.leaderboardRowCurrentUser {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.16) 0%, rgba(124, 58, 237, 0.22) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.65);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
+}
+
+.userStandingFooter {
+  margin-top: 1.1rem;
+  border-radius: 16px;
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(90deg, rgba(35, 20, 68, 0.95) 0%, rgba(48, 28, 30, 0.92) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.42);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+
+/* Premium Subtle Animations (Section 79 & 80) */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.65));
+  }
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animateFloat {
+  animation: floatSubtle 3.6s ease-in-out infinite;
+}
+
+.animateCrownGlow {
+  animation: floatSubtle 4s ease-in-out infinite, pulseGlow 3s ease-in-out infinite;
+}
+
+.skeletonPulse {
+  background: linear-gradient(
+    90deg,
+    rgba(35, 22, 66, 0.75) 25%,
+    rgba(68, 42, 122, 0.55) 50%,
+    rgba(35, 22, 66, 0.75) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.8s infinite linear;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Tablet Layout Interpolation (768px - 1099px, Section 74 & 126) */
+@media (max-width: 1099px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rewardCardsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leaderboardRow {
+    grid-template-columns: 52px 1.5fr 1fr 1fr;
+  }
+}
+
+/* Mobile Dedicated Responsive Layout (< 768px, Section 73 & 125) */
+@media (max-width: 767px) {
+  .containerMain {
+    padding: 0 0.85rem;
+  }
+
+  .heroBannerCard {
+    padding: 1.15rem;
+  }
+
+  .statsRow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .statBox {
+    padding: 0.6rem 0.55rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .rewardCardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .benefitCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.9rem 0.65rem;
+  }
+
+  .leaderboardSection {
+    padding: 1.1rem 0.95rem;
+  }
+
+  .podiumGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .leaderboardRow {
+    grid-template-columns: 44px 1fr auto;
+    gap: 0.55rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .milestoneCardsGrid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .milestoneTrackWrap {
+    padding: 1rem 0.5rem !important;
+  }
+
+  .trustStrip {
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ==========================================================================
+   Streak Milestone Progress Indicator & Reward Animations (7, 30, 100 Days)
+   ========================================================================== */
+
+.milestoneSection {
+  position: relative;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.18) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(26, 16, 52, 0.96) 0%, rgba(13, 8, 28, 0.98) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.32);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  padding: 1.6rem 1.65rem;
+  margin-bottom: 1.85rem;
+  overflow: hidden;
+}
+
+.milestoneTrackWrap {
+  position: relative;
+  margin: 1.5rem 0 1.85rem;
+  padding: 1rem 1.25rem 0.5rem;
+}
+
+.milestoneTrackBg {
+  position: relative;
+  height: 10px;
+  background: rgba(30, 20, 60, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  border-radius: 999px;
+  overflow: visible;
+}
+
+.milestoneProgressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8b5cf6 0%, #38bdf8 30%, #f59e0b 70%, #fbbf24 100%);
+  background-size: 200% 100%;
+  animation: shimmerSweep 3s infinite linear;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+  transition: width 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.milestoneLeadDot {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3.5px solid #fbbf24;
+  box-shadow: 0 0 14px #fbbf24, 0 0 28px rgba(245, 158, 11, 0.8);
+  animation: pulseDot 1.8s infinite ease-in-out;
+  z-index: 5;
+}
+
+.milestoneNodesRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -16px;
+  pointer-events: none;
+}
+
+.milestoneNodeItem {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.milestoneNodeItem:hover {
+  transform: translateY(-2px);
+}
+
+.milestoneNodeCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.76rem;
+  transition: all 200ms ease;
+  z-index: 3;
+}
+
+.milestoneNodeCircleAchieved {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: 2px solid #34d399;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+}
+
+.milestoneNodeCircleTarget {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #1a0f02;
+  border: 2px solid #fef08a;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.65);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.milestoneNodeCircleLocked {
+  background: rgba(23, 14, 46, 0.95);
+  color: #94a3b8;
+  border: 2px solid rgba(139, 92, 246, 0.28);
+}
+
+.milestoneNodeLabel {
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.milestoneCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .milestoneCardsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.milestoneCard {
+  position: relative;
+  border-radius: 18px;
+  padding: 1.15rem 1rem;
+  background: linear-gradient(180deg, rgba(28, 17, 56, 0.92) 0%, rgba(15, 9, 32, 0.96) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.24);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), border-color 180ms ease, box-shadow 180ms ease;
+  min-height: 250px;
+}
+
+.milestoneCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+.milestoneCardMajor {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(38, 24, 70, 0.94) 0%, rgba(16, 10, 36, 0.98) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.48);
+}
+
+.milestoneCardAchieved {
+  border: 1.5px solid rgba(52, 211, 153, 0.65);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+}
+
+.milestoneCardTarget {
+  border: 1.5px solid rgba(251, 191, 36, 0.75);
+  box-shadow: 0 8px 26px rgba(245, 158, 11, 0.22);
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.milestoneCardLocked {
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  opacity: 0.88;
+}
+
+.milestoneMajorTag {
+  position: absolute;
+  top: -9px;
+  right: 12px;
+  background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+  color: #ffffff;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.45);
+}
+
+.celebrationModalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 4, 18, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+}
+
+.celebrationModalCard {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(245, 158, 11, 0.26) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(32, 19, 66, 0.98) 0%, rgba(15, 9, 32, 0.99) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.55);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 158, 11, 0.25);
+  padding: 2.2rem 1.85rem;
+  color: #ffffff;
+  text-align: center;
+  animation: floatSubtle 4s ease-in-out infinite;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.rotatingRaysBg {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.28) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: spinRays 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes spinRays {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    box-shadow: 0 0 14px #fbbf24;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.18);
+    box-shadow: 0 0 24px #fbbf24, 0 0 36px rgba(245, 158, 11, 0.9);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .rewardCardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+}

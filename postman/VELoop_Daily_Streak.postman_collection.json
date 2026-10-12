@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "VELoop Rewards — Daily Streak & AI Studio Collection",
+    "_postman_id": "veloop-daily-streak-2026",
+    "description": "Postman collection covering Login, Get Streak, Get Status, Claim Day 1/2, Get History, and Negative Anti-Cheat Security Tests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Login (Get JWT)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] },
+        "body": { "mode": "raw", "raw": "{\n  \"email\": \"demo@velooprewards.in\"\n}" }
+      }
+    },
+    {
+      "name": "2. Get Daily Streak State",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+        "url": { "raw": "{{baseUrl}}/api/daily-streak", "host": ["{{baseUrl}}"], "path": ["api", "daily-streak"] }
+      }
+    },
+    {
+      "name": "3. Get Streak Status",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+        "url": { "raw": "{{baseUrl}}/api/daily-streak/status", "host": ["{{baseUrl}}"], "path": ["api", "daily-streak", "status"] }
+      }
+    },
+    {
+      "name": "4. Claim Eligible Day Reward",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwtToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "{{baseUrl}}/api/daily-streak/claim", "host": ["{{baseUrl}}"], "path": ["api", "daily-streak", "claim"] },
+        "body": { "mode": "raw", "raw": "{\n  \"day\": 2\n}" }
+      }
+    },
+    {
+      "name": "5. Negative Test — Jump to Day 7 Cheat",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwtToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "{{baseUrl}}/api/daily-streak/claim", "host": ["{{baseUrl}}"], "path": ["api", "daily-streak", "claim"] },
+        "body": { "mode": "raw", "raw": "{\n  \"day\": 7\n}" }
+      }
+    },
+    {
+      "name": "6. Negative Test — Cross-User ID Spoofing",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{jwtToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "{{baseUrl}}/api/daily-streak/claim", "host": ["{{baseUrl}}"], "path": ["api", "daily-streak", "claim"] },
+        "body": { "mode": "raw", "raw": "{\n  \"userId\": \"ANOTHER_USER_99\",\n  \"day\": 2\n}" }
+      }
+    },
+    {
+      "name": "7. Get Claim History & Audit Logs",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{jwtToken}}" }],
+        "url": { "raw": "{{baseUrl}}/api/daily-streak/history", "host": ["{{baseUrl}}"], "path": ["api", "daily-streak", "history"] }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "jwtToken", "value": "" }
+  ]
+}
